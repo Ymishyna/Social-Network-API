@@ -52,7 +52,7 @@ In addition to this, your walkthrough video should show the POST, PUT, and DELET
 
 The following animation shows the POST and DELETE routes for a user’s friend list being tested in Insomnia:
 
-![Demo that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia.](.assets/demo-04.gif)
+![Demo that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia.](./assets/demo-04.gif)
 
 In addition to this, your walkthrough video should show the POST and DELETE routes for reactions to thoughts being tested in Insomnia.
 

@@ -4,7 +4,7 @@
   "description": "This project creates an API for a social network using NoSQL database, MongoDB.",
   "main": "server.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "seed": "node utils/seed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
