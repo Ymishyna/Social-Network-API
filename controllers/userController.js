@@ -41,22 +41,25 @@ module.exports = {
                 username: req.body.username,
                 email: req.body.email
             },
-            { new: true },
-            (err, result) => {
+            { new: true }
+        )
+            .then((result) => {
                 if (result) {
                     res.status(200).json(result);
                     console.log(`Updated: ${result}`);
                 } else {
-                    console.log(err);
-                    res.status(500).json({ message: 'error', err });
+                    res.status(404).json({ message: 'User not found' });
                 }
-            }
-        )
+            })
+            .catch((err) => {
+                console.log(err);
+                res.status(500).json({ message: 'Internal server error', err });
+            });
     },
 
     // delete a user (BONUS: Remove a user's associated thoughts when deleted)
     deleteUser(req, res) {
-        User.findOneAndRemove({ _id: req.params.userId })
+        User.findOneAndDelete({ _id: req.params.userId })
             .then((user) =>
                 !user
                     ? res.status(404).json({ message: 'No user with that ID' })

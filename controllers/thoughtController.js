@@ -53,22 +53,25 @@ module.exports = {
                 thoughtText: req.body.thoughtText,
                 username: req.body.username
             },
-            { new: true },
-            (err, result) => {
+            { new: true }
+        )
+            .then((result) => {
                 if (result) {
                     res.status(200).json(result);
                     console.log(`Updated: ${result}`);
                 } else {
-                    console.log(err);
-                    res.status(500).json({ message: 'error', err });
+                    res.status(404).json({ message: 'Thought not found' });
                 }
-            }
-        )
+            })
+            .catch((err) => {
+                console.log(err);
+                res.status(500).json({ message: 'Internal server error', err });
+            });
     },
 
     // delete a thought
     deleteThought(req, res) {
-        Thought.findOneAndRemove({ _id: req.params.thoughtId })
+        Thought.findOneAndDelete({ _id: req.params.thoughtId })
             .then((thought) =>
                 !thought
                     ? res.status(404).json({ message: 'No thought with this id!' })
