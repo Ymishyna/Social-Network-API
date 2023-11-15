@@ -1,4 +1,4 @@
-// Require Mongoose
+// require Mongoose
 const { Schema, model } = require("mongoose");
 const reactionSchema = require("./Reaction");
 
@@ -8,16 +8,17 @@ const thoughtSchema = new Schema(
     thoughtText: {
       type: String,
       required: true,
-      maxlength: 280,
-      minlength: 1,
+       minlength: 1,
+      maxlength: 280
+      
     },
     createdAt: {
       type: Date,
-      default: Date.now,
+      default: Date.now
     },
     username: {
       type: String,
-      required: true,
+      required: true
     },
     reactions: [reactionSchema],
   },
@@ -29,7 +30,7 @@ const thoughtSchema = new Schema(
   }
 );
 
-// get total count of friends
+// creating a virtual property `reactionCount` that gets # of reactions
 thoughtSchema.virtual("reactionCount").get(function () {
   return this.reactions.length;
 });
