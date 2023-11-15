@@ -95,6 +95,6 @@ Find me on GitHub: [Ymishyna](https://github.com/Ymishyna)
 Disclaimer: The following video provides an illustrative example of how to respond to prompts using the given content. It is intended solely for instructional purposes and to showcase the concept. Users are encouraged to utilize their own responses, thoughts, and ideas when interacting with prompts to achieve personalized and authentic outcomes. The video's content should not be considered prescriptive or definitive, as individual preferences, opinions, and circumstances vary. Viewer discretion is advised, and any actions taken based on the video's content are the responsibility of the user.
 ``````
 
-![Walkthrough Video Link](https://drive.google.com/file/d/1jazv4GTwpemZ1rM8n_BX1VEamGKU-M-4/view?usp=sharing).
+![Walkthrough Video Link](https://drive.google.com/file/d/1KpLOZ0ulFMqGZwmw3pyE2ZNzynb8l6Gd/view?usp=sharing).
 
 
